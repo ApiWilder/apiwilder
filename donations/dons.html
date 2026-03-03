@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="dons.css">
+    <title>Dons</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="image/logo.png" alt="Api Wilder">
+            </div>
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="burger">☰</label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <h1>Dons</h1>
+            <h2>Où va votre argent ?</h2>
+            <p>Soutenez un rucher collectif et local
+                qui agit depuis 2011 pour la biodiversité
+                à Berchem. Votre don finance du
+                matériel, des ateliers et la survie de
+                nos pollinisateurs.</p>
+            <a href="#" class="btn">Faire un don</a>
+        </div>
+    </header>
+
+
+    <main id="dons-main">
+
+        <!-- Section jauge progressive -->
+        <section class="dons-section" id="don-form">
+            <span id="gauge-current">0€</span>
+            <span id="gauge-goal">0€</span>
+            <div class="dons-gauge">
+                <div class="dons-gauge-bar" id="gauge-bar"></div>
+            </div>
+            <div class="dons-amountLimits">
+            </div>
+        </section>
+
+        <!-- Section "Dons récents" inscrits ddans le fichier json -->
+        <section class="dons-section">
+            <h2 class="dons-sectionTitle">DONS RÉCENTS</h2>
+            <ul class="dons-recentList" id="recent-list">
+                <!-- Rempli par dons.js -->
+            </ul>
+        </section>
+
+        <!-- Section récompenses manipulé via le DOM JavaScript -->
+        <section class="dons-section">
+            <h2 class="dons-sectionTitle">RÉCOMPENSES</h2>
+            <div class="dons-rewards" id="rewards">
+                <!-- Rempli par dons.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#" class="footer"> CGU | confidentialité | Cookies </a>
+    </footer>
+    <script src="dons.js"></script>
+</body>
+
+</html>

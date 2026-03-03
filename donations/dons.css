@@ -1,0 +1,56 @@
+#dons-main{
+    background: #FFDF00;
+    padding: 32px;
+}
+
+#don-form {
+    background: #FFFBF0;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+#gauge-current {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #292929;
+}
+
+#gauge-goal {
+    font-size: 0.9rem;
+    color: #292929;
+    display: block; /* Pour que le texte passe en dessous de gauge-current */
+    margin-bottom: 16px;
+}
+
+.dons-gauge {
+    background: #292929;
+    border-radius: 8px;
+    height: 22px;
+}
+
+.dons-gauge-bar {
+    height: 100%;
+    background: #FFDF00;
+    border-radius: 8px;
+    transition: width 0.8s ease;
+}
+
+/*
+#gauge-percent {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111;
+}
+
+#gauge-contributors {
+    font-size: 0.85rem;
+    color: #555;
+    display: block;
+    margin-top: 12px;
+}
+*/
