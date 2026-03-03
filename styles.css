@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(84, 84, 81);
+}
+
+.footer {
+  color: #f0f32a;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  padding-top: 2rem;
+}
