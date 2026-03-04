@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="dons.css">
+    <title>Dons</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/logoapiwilder/logo api wilder typo (black)-08.png" alt="Api Wilder">
+            </div>
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="burger">☰</label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <span class="label-top">TOUT SAVOIR SUR</span>
+            <h1>Les dons</h1>
+            <p>Soutenez un rucher collectif et local qui agit depuis 2011
+                pour la biodiversité à Berchem. Votre don finance du matériel,
+                des ateliers et la survie de nos pollinisateurs.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn">Faire un don</a>
+                <a href="#" class="btn-outline">Devenir bénévole</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main id="dons-main">
+
+        <!-- Section jauge progressive -->
+        <section class="dons-section" id="don-form">
+            <span id="gauge-current">0€</span>
+            <span id="gauge-goal">0€</span>
+            <div class="dons-gauge">
+                <div class="dons-gauge-bar" id="gauge-bar"></div>
+            </div>
+            <div class="dons-amountLimits">
+            </div>
+            <p id="contributeurs">68 contributeurs soutiennent ce projets </p>
+        </section>
+
+
+
+        <!-- Section récompense - palier -->
+        <section class="dons-section">
+            <div class="dons-header">
+                <h2 class="dons-header-paliers">Paliers</h2>
+                <h2 class="dons-sectionTitle" id="dons-recompenseTitle">Récompenses</h2>
+            </div>
+
+            <div class="dons-rewards">
+
+                <div class="reward-card">
+                    <div class="reward-card-top">
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
+                        </div>
+                        <div class="reward-info">
+                            <p class="reward-range">0-50€</p>
+                            <p class="reward-title">Remerciement</p>
+                            <p class="reward-desc">Un grand merci du fond du coeur</p>
+                        </div>
+                    </div>
+                    <button class="reward-btn">Obtenir la récompense</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="reward-card-top">
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
+                        </div>
+                        <div class="reward-info">
+                            <p class="reward-range">51-100€</p>
+                            <p class="reward-title">Visite du rucher</p>
+                            <p class="reward-desc">Une visite au rucher, au plus près des abeilles.</p>
+                        </div>
+                    </div>
+                    <button class="reward-btn">Obtenir la récompense</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="reward-card-top">
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
+                        </div>
+                        <div class="reward-info">
+                            <p class="reward-range">101-200€</p>
+                            <p class="reward-title"></p>
+                            <p class="reward-desc">Un pot de miel de la récolte (selon la saison)<br>La visite du rucher
+                            </p>
+                        </div>
+                    </div>
+                    <button class="reward-btn">Obtenir la récompense</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="reward-card-top">
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
+                        </div>
+                        <div class="reward-info">
+                            <p class="reward-range">À partir de 200 €</p>
+                            <p class="reward-title"></p>
+                            <p class="reward-desc">L'expérience ApiWilder<br>Visite du rucher<br>Un à deux pots de miel
+                            </p>
+                        </div>
+                    </div>
+                    <button class="reward-btn">Obtenir la récompense</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section "Dons récents" inscrits dans le fichier json -->
+        <section class="dons-section" id="dons-recent">
+            <div class="dons-header">
+                <h2 class="dons-sectionTitle">Dons récents</h2>
+            </div>
+            <ul class="dons-recentList" id="recent-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Apiwilder©2026</p>
+    </footer>
+    <script src="dons.js"></script>
+</body>
+
+</html>
