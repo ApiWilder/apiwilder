@@ -1,9 +1,9 @@
 {
     "goal": 1500,
     "recent": [
-    { "name": "Pseudo4", "amount": 170, "avatar": "avatar4.png" },
-    { "name": "Pseudo5", "amount": 50, "avatar": "avatar5.png" },
-    { "name": "Pseudo6", "amount": 10, "avatar": "avatar6.png" },
-    { "name": "Pseudo7", "amount": 10, "avatar": "avatar7.png" }
+    { "name": "Anonyme", "amount": 170, "avatar": "avatar4.png" },
+    { "name": "Anonyme", "amount": 50, "avatar": "avatar5.png" },
+    { "name": "Anonyme", "amount": 10, "avatar": "avatar6.png" },
+    { "name": "Anonyme", "amount": 10, "avatar": "avatar7.png" }
   ]
 }

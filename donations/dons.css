@@ -1,5 +1,5 @@
 #dons-main{
-    background: #FFDF00;
+    background: #FDF8DB;
     padding: 32px;
 }
 
@@ -54,3 +54,250 @@
     margin-top: 12px;
 }
 */
+
+/* Dons récents */
+.dons-sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #292929;
+    background-color: #FFFBF0;
+    padding: 10px 14px;
+    border-radius: 16px;
+}
+
+#dons-list {
+    list-style: none;
+    padding: 0;
+}
+
+#don-form{
+    border: 1px solid #0c0c0c;
+}
+
+.dons-section {
+    padding: 16px;
+    border-radius: 12px;
+    width: 100%;       
+    max-width: 520px;
+    box-sizing: border-box;
+}
+
+.dons-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.dons-sectionTitle {
+    font-size: 18px;
+    color: #111;
+}
+
+.dons-badge {
+    color: #111;
+    padding: 2px 10px;
+}
+
+.dons-recentList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.don-item {
+    background-color: #FFFBF0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    gap: 12px;
+    border: 1px solid #0c0c0c;
+}
+
+.don-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #FFDF00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.don-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.don-name {
+    margin-top: 10px;
+    color: #292929;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.don-time {
+    color: #292929;
+    font-size: 11px;
+    margin-top: 1px;
+}
+
+.don-amount {
+    color: #292929;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+
+/* ===== DESKTOP (min-width: 768px) ===== */
+@media (min-width: 768px) {
+
+    .dons-section {
+        width: 520px;
+        max-width: 100%;
+        margin: 0 auto; /* ← Centre le bloc */
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .dons-sectionTitle {
+        font-size: 24px;
+    }
+
+    .dons-badge {
+        font-size: 20px;
+        padding: 4px 14px;
+    }
+
+    .dons-recentList {
+        gap: 12px;
+    }
+
+    .don-item {
+        padding: 14px 18px;
+        border-radius: 14px;
+        gap: 16px;
+        align-items: center; /* ← Aligne avatar / texte / montant verticalement */
+    }
+
+    .don-avatar {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    .don-name {
+        font-size: 16px;
+        margin-top: 0; /* ← Supprime le décalage vers le bas sur desktop */
+    }
+
+    .don-time {
+        font-size: 13px;
+    }
+
+    .don-amount {
+        font-size: 22px;
+    }
+}
+
+/* RECOMPENSES */
+
+.dons-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 16px;
+}
+
+.dons-header-paliers {
+font-weight: 600;
+color: #292929;
+}
+
+
+#dons-recompenseTitle {
+    font-size: 22px;
+    font-weight: 900;
+    color: #292929;
+    text-decoration: underline;
+    background-color: #FDF8DB;
+}
+
+.dons-rewards {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.reward-card {
+background: #1e1e1e;
+border-radius: 16px;
+padding: 20px 20px 16px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.reward-card-top {
+display: flex;
+align-items: flex-start;
+gap: 14px;
+}
+
+.reward-badge {
+color: #1e1e1e;
+background: #FFFBF0;
+border-radius: 16px;
+font-size: 15px;
+min-width: 54px;
+height: 54px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+margin: 0;
+}
+
+.reward-info {
+display: flex;
+flex-direction: column;
+gap: 4px;
+padding-top: 4px;
+}
+
+.reward-title {
+font-size: 17px;
+color: #FFFBF0;
+font-weight: bold;
+}
+
+.reward-desc {
+font-size: 14px;
+color: #FFFBF0;
+line-height: 1.4;
+}
+
+.reward-btn {
+background: #FFDF00;
+color: #1e1e1e;
+border-radius: 30px;
+padding: 12px 0;
+width: 100%;
+font-size: 16px;
+cursor: pointer;
+text-align: center;
+transition: background 0.2s, transform 0.1s;
+}
+
+.reward-btn:hover {
+background: #f5d400;
+transform: translateY(-1px);
+}
+
+.reward-btn:active {
+transform: translateY(0);
+}
