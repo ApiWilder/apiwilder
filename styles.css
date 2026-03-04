@@ -163,6 +163,22 @@ header .hero p {
   border-radius: 2px;
 }
 
+/* Index : nav transparente (sans couleur), logo et burger blancs sur l’image */
+.header--transparent {
+  background: transparent !important;
+  justify-content: center;
+}
+
+.header--transparent .header-logo img {
+  height: 140px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.header--transparent .burger span {
+  background: #fff;
+}
+
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -255,6 +271,12 @@ body:has(#dons-main) section.hero .hero-inner {
 /* Page contact : pareil que dons (bloc centré, texte à gauche) */
 body:has(#contact-main) section.hero .hero-content,
 body:has(#contact-main) section.hero .hero-inner {
+  text-align: left;
+}
+
+/* Page index : idem (bloc centré, texte à gauche) */
+body:has(#index-main) section.hero .hero-content,
+body:has(#index-main) section.hero .hero-inner {
   text-align: left;
 }
 
@@ -782,6 +804,7 @@ footer {
 
 /* Footer fixé en bas de page (index, success) — sans classe body */
 body:has(header > .hero),
+body:has(#index-main),
 body:has(.succes-card) {
   display: flex;
   flex-direction: column;
@@ -789,6 +812,7 @@ body:has(.succes-card) {
 }
 
 body:has(header > .hero) footer,
+body:has(#index-main) footer,
 body:has(.succes-card) footer {
   margin-top: auto;
 }

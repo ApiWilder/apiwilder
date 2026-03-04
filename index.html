@@ -7,40 +7,47 @@
     <title>Accueil</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-          <div class="logo">
-            <img src="image/logo.png" alt="Api Wilder">
-          </div>
-        <input type="checkbox" id="toggle">
-      <label for="toggle" class="burger">☰</label>
-      <nav class="nav">
+    <header class="header header--transparent">
+        <div class="header-logo">
+            <img src="logoapiwilder/logo%20api%20wilder%20typo%20(black)-08.png" alt="Api Wilder">
+        </div>
+        <a href="#menu" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+
+    <nav id="menu" class="nav-overlay">
+        <a href="#" class="nav-close">&times;</a>
         <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Projets</a></li>
-          <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="projet.html">Projet</a></li>
+            <li><a href="transparence.html">Transparence</a></li>
+            <li><a href="dons.html">Dons</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav>
+    </nav>
+
+    <section class="hero" style="background-image: url('./Apiwilder/indexHeader.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-inner">
+                <p class="hero-label" style="color: #FFDF00;">Protégeons les abeilles</p>
+                <h1>Notre Asbl</h1>
+                <p class="hero-desc" style="color: #FFFBF0;">Soutenez un rucher collectif et local qui agit depuis 2011 pour la biodiversité à Berchem. Votre don finance du matériel, des ateliers et la survie de nos pollinisateurs.</p>
+                <div class="hero-btns">
+                    <a href="dons.html" class="btn yellow">Faire un don</a>
+                    <a href="contact.html#benevole" class="btn dark-outline">Devenir bénévole</a>
+                </div>
+            </div>
         </div>
-        <div class="hero">
-          <h1>Protégeons les abeilles</h1>
-          <p>
-            🌼 Soutenir la biodiversité locale, soutenir les abeilles
-      
-      Chez ApiWilder, chaque don est une graine semée.
-      Il nourrit nos ruches, protège la biodiversité
-      et permet aux abeilles de continuer leur danse précieuse.
-      
-      Merci de faire partie du cercle.
-          </p>
-          <a href="#" class="btn">Faire un don</a>
-          <a href="#" class="btn-outline">Devenir bénévole</a>
-        </div>
-      
-      </header>
-  
-   <footer>
+    </section>
+
+    <main id="index-main"></main>
+
+    <footer>
         <p>Apiwilder©2026</p>
     </footer>
 </body>
