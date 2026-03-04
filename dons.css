@@ -1,3 +1,209 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background: #F7F4E3;
+  color: #1a1a1a;
+}
+
+/* ── HEADER ── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #F7F4E3;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  height: 90px;
+}
+
+.burger {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  width: 28px;
+  text-decoration: none;
+}
+
+.burger span {
+  display: block;
+  height: 2.5px;
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+
+/* ── NAV MENU ── */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  z-index: 200;
+  background: #F7F4E3;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 32px;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+}
+
+.nav-overlay:target {
+  display: flex;
+}
+
+.nav-overlay ul {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nav-overlay ul li a {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-overlay ul li a:hover,
+.nav-overlay ul li a.active {
+  color: #F5D800;
+}
+
+.nav-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.75) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.hero-inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F5D800;
+  margin-bottom: 6px;
+}
+
+.hero-content h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.hero-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── BOUTONS ── */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.btn.yellow       { background: #F5D800; color: #1a1a1a; }
+.btn.dark         { background: #1a1a1a; color: #fff; }
+.btn.dark-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.75);
+}
+.btn.dark-outline:hover { background: rgba(255,255,255,0.1); }
+
+/* ── RESPONSIVE HERO ── */
+@media (max-width: 600px) {
+  .hero-content { padding: 24px 20px 40px; }
+}
+
+/* ══════════════════════════════════════
+   STYLES SPÉCIFIQUES DONS
+══════════════════════════════════════ */
+
+:root {
+  --noir: #111;
+  --blanc: #ffffff;
+}
+
 #don-form {
     background: #FFFFFF;
     border-radius: 16px;
@@ -16,7 +222,7 @@
 #gauge-goal {
     font-size: 0.9rem;
     color: #292929;
-    display: block; /* Pour que le texte passe en dessous de gauge-current */
+    display: block;
     margin-bottom: 16px;
 }
 
@@ -39,24 +245,6 @@
     display: block;
     margin-top: 12px;
 }
-
-/*
-#gauge-percent {
-    position: absolute;
-    right: 0;
-    top: -20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #111;
-}
-
-#gauge-contributors {
-    font-size: 0.85rem;
-    color: #555;
-    display: block;
-    margin-top: 12px;
-}
-*/
 
 /* Dons récents */
 .dons-sectionTitle {
@@ -83,8 +271,6 @@
     background-position: center;
     position: relative;
 }
-
-
 
 .dons-header {
     display: flex;
@@ -155,11 +341,10 @@
 
 /* ===== DESKTOP (min-width: 768px) ===== */
 @media (min-width: 768px) {
-
     .dons-section {
         width: 520px;
         max-width: 100%;
-        margin: 0 auto; /* ← Centre le bloc */
+        margin: 0 auto;
         padding: 24px;
         border-radius: 16px;
     }
@@ -176,7 +361,7 @@
         padding: 14px 18px;
         border-radius: 14px;
         gap: 16px;
-        align-items: center; /* ← Aligne avatar / texte / montant verticalement */
+        align-items: center;
     }
 
     .don-avatar {
@@ -187,7 +372,7 @@
 
     .don-name {
         font-size: 16px;
-        margin-top: 0; /* ← Supprime le décalage vers le bas sur desktop */
+        margin-top: 0;
     }
 
     .don-time {
@@ -200,7 +385,6 @@
 }
 
 /* RECOMPENSES */
-
 .dons-header {
     display: flex;
     justify-content: space-between;
@@ -255,12 +439,9 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    /* Placeholder couleur si pas d'icône */
     color: #C8860A;
     font-size: 28px;
 }
-
-
 
 .reward-info {
     display: flex;
@@ -306,20 +487,13 @@
 }
 
 .reward-btn:hover {
-    background: #f5d400;
+    background-color: #FFE533;
     transform: scale(0.99);
 }
 
 .reward-btn:active {
-    transform: scale(0.97);
-}
-
-.reward-btn:hover {
-    background-color: #FFE533;
-}
-
-.reward-btn:active {
     background: #D7AE0A;
+    transform: scale(0.97);
 }
 
 /* Footer */
@@ -331,8 +505,8 @@ footer {
     font-size: 14px;
     letter-spacing: 0.5px;
     margin-top: 2rem;
-  }
-  
-  footer p {
+}
+
+footer p {
     opacity: 0.85;
-  }
+}
