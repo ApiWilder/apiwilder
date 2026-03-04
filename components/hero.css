@@ -1,0 +1,58 @@
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .hero__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero__label {
+    font-size: 16px;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .hero__title {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .hero__description {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* RESPONSIVE - HERO */
+  @media (max-width: 768px) {
+    .hero__title {
+      font-size: 36px;
+    }
+  
+    .hero__description {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      padding: 30px 15px;
+    }
+  
+    .hero__title {
+      font-size: 28px;
+    }
+  
+    .hero__label {
+      font-size: 14px;
+    }
+  }

@@ -1,0 +1,17 @@
+/* MAIN */
+.main {
+    padding: 40px 20px;
+    background: var(--color-bg-light);
+  }
+  
+  .main__container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* RESPONSIVE - MAIN */
+  @media (max-width: 480px) {
+    .main {
+      padding: 30px 15px;
+    }
+  }

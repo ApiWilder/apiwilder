@@ -1,0 +1,47 @@
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn--primary {
+    background: var(--color-primary);
+    color: black;
+  }
+  
+  .btn--primary:hover {
+    background: #ffaa00;
+    box-shadow: 0 10px 25px rgba(255, 191, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  .btn--dark {
+    background: var(--color-dark);
+    color: white;
+  }
+  
+  .btn--dark:hover {
+    background: #3d3d3d;
+  }
+  
+  /* RESPONSIVE - BUTTON */
+  @media (max-width: 768px) {
+    .btn {
+      padding: 12px 30px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn {
+      padding: 12px 25px;
+      font-size: 13px;
+    }
+  }
