@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="logo1.png" alt="Api Wilder">
+    </div>
+    <a href="#menu" class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </header>
+
+  <!-- MENU NAV -->
+  <nav id="menu" class="nav-overlay">
+    <a href="#" class="nav-close">&times;</a>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="projet.html">Projet</a></li>
+      <li><a href="transparence.html">Transparence</a></li>
+      <li><a href="don.html">Dons</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO pleine page -->
+  <section class="hero" style="background-image: url('contact_equipe.png');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <p class="hero-label">Rejoignez la dynamique !</p>
+        <h1>Contact</h1>
+        <p class="hero-desc">Vous avez envie de mettre la main à la pâte ? Que vous soyez apiculteur chevronné ou simplement curieux, nous avons besoin de bras pour l'entretien du site, l'animation lors des fêtes communales ou la gestion de l'ASBL.</p>
+        <div class="hero-btns">
+          <a href="don.html" class="btn yellow">Faire un don</a>
+          <a href="#benevole" class="btn dark-outline">Devenir bénévole</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- FORMULAIRE BENEVOLE (caché par défaut, visible via #benevole dans l'URL) -->
+    <section id="benevole" class="card form-section">
+      <h2>Formulaire Bénévole</h2>
+      <form class="form-submit" action="succes.html" method="get">
+
+        <div class="row-inputs">
+          <input type="text" placeholder="Nom" required>
+          <input type="text" placeholder="Prénom" required>
+        </div>
+        <div class="row-inputs">
+          <input type="email" placeholder="Email" required>
+
+          <!-- Ajout du title... car surlignement rouge-->
+          <input type="date" required title="Date de naissance" placeholder="Date de naissance" aria-label="Date de naissance">
+        </div>
+
+        <div class="benevole-card">
+          <div class="col">
+            <label>Dans quoi aimeriez-vous vous impliquer ?</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox"> Bricolage</label>
+              <label><input type="checkbox"> Jardinage</label>
+              <label><input type="checkbox"> Apiculteur</label>
+            </div>
+
+            <label>Avez-vous déjà une expérience en apiculture ?</label>
+            <div class="radio-group">
+              <label><input type="radio" name="experience"> Aucune</label>
+              <label><input type="radio" name="experience"> Amateur</label>
+              <label><input type="radio" name="experience"> Expérimenté</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <label>Fréquence souhaitée ?</label>
+            <div class="radio-group">
+              <label><input type="radio" name="frequence"> 2-3x/semaine</label>
+              <label><input type="radio" name="frequence"> 1x/semaine</label>
+              <label><input type="radio" name="frequence"> 1x/mois</label>
+            </div>
+
+            <label>Êtes-vous allergique aux piqûres d'abeilles ?</label>
+            <div class="radio-group">
+              <label><input type="radio" name="allergie"> Oui</label>
+              <label><input type="radio" name="allergie"> Non</label>
+              <label><input type="radio" name="allergie"> Je ne sais pas</label>
+            </div>
+          </div>
+        </div>
+
+        <textarea placeholder="Pourquoi souhaitez-vous nous rejoindre ?"></textarea>
+
+        <div class="btn-group">
+          <button type="submit" class="btn dark">Envoyer ma candidature</button>
+        </div>
+
+      </form>
+    </section>
+
+  </div>
+
+</body>
+</html>
