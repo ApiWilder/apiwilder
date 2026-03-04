@@ -7,42 +7,48 @@
   <title>Nos projets - API Wilder</title>
 </head>
 <body>
-  <!-- HEADER -->
+  <!-- HEADER (même style que dons : fond crème, logo à gauche, burger) -->
   <header class="header">
-    <div class="header__container">
-      <!-- NAVBAR -->
-      <nav class="navbar">
-        <div class="navbar__wrapper">
-          <div class="navbar__logo">
-            <img src="logoapiwilder/logo%20api%20wilder%20typo%20(black)-08.png" alt="Api Wilder">
-          </div>
-          <input type="checkbox" id="navbar__toggle" class="navbar__toggle">
-          <label for="navbar__toggle" class="navbar__burger">☰</label>
-          <ul class="navbar__menu">
-            <li class="navbar__item"><a href="#" class="navbar__link">Accueil</a></li>
-            <li class="navbar__item"><a href="#" class="navbar__link">À propos</a></li>
-            <li class="navbar__item"><a href="#" class="navbar__link">Projets</a></li>
-            <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- HERO SECTION -->
-      <section class="hero">
-        <div class="hero__content">
-          <p class="hero__label">Découvrez</p>
-          <h1 class="hero__title">Nos projets</h1>
-          <p class="hero__description">
-          Plus qu'une production de miel, ApiWilder est un laboratoire de biodiversité. 
-          </p>
-          <a href="#" class="btn btn--primary">Devenir adhérent</a>
-        </div>
-      </section>
+    <div class="header-logo">
+      <img src="logoapiwilder/logo%20api%20wilder%20typo%20(black)-08.png" alt="Api Wilder">
     </div>
+    <a href="#menu" class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
   </header>
 
+  <nav id="menu" class="nav-overlay">
+    <a href="#" class="nav-close">&times;</a>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="projet.html" class="active">Projet</a></li>
+      <li><a href="transparence.html">Transparence</a></li>
+      <li><a href="dons.html">Dons</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO pleine page (photo projetHeader.png) -->
+  <section class="hero" style="background-image: url('./Apiwilder/projetHeader.png');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <p class="hero-label" style="color: #FFDF00;">Nos actions sur le terrain</p>
+        <h1>Projets</h1>
+        <p class="hero-desc" style="color: #FFFBF0;">Plus qu'une production de miel, ApiWilder est un laboratoire de biodiversité.</p>
+        <div class="hero-btns">
+          <a href="dons.html" class="btn yellow">Faire un don</a>
+          <a href="contact.html#benevole" class="btn btn--light">Devenir bénévole</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- MAIN -->
-  <main class="main">
+  <main id="projet-main" class="main">
     <div class="main__container">
       <!-- SECTION GALERIE -->
       <section class="projects">

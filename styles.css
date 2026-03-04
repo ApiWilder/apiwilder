@@ -280,6 +280,12 @@ body:has(#index-main) section.hero .hero-inner {
   text-align: left;
 }
 
+/* Page projet : idem */
+body:has(#projet-main) section.hero .hero-content,
+body:has(#projet-main) section.hero .hero-inner {
+  text-align: left;
+}
+
 .hero-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
@@ -362,6 +368,28 @@ section.hero .hero-content h1 {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Bouton blanc (maquette projet : Devenir bénévole) */
+section.hero .btn--light {
+  display: block;
+  width: 100%;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  color: #1a1a1a;
+  border: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+section.hero .btn--light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Container contact */
