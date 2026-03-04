@@ -140,6 +140,11 @@ header .hero p {
   justify-content: flex-start;
 }
 
+/* Dons, contact, projet : logo centré */
+.header:not(.header--transparent) { /* :not = tous les header sauf header--transparent*/
+  justify-content: center;
+}
+
 .header-logo img {
   height: 90px;
 }
