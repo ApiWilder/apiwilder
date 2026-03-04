@@ -1,0 +1,24 @@
+/* ============================================
+   VARIABLES GLOBALES - Api Wilder
+   ============================================ */
+
+:root {
+  /* Palette principale */
+  --jaune: #f4c430;
+  --jaune-pastel: #fff4cc;
+  --noir: #111;
+  --blanc: #ffffff;
+
+  /* Alias / palette unifiée (contact, dons, projet) */
+  --color-primary: #F5D800;
+  --color-primary-hover: #FFE533;
+  --color-dark: #1a1a1a;
+  --color-text: #1a1a1a;
+  --color-text-light: #555;
+  --color-text-muted: #888;
+  --color-bg-white: #ffffff;
+  --color-bg-light: #F7F4E3;
+  --color-bg-cream: #F7F4E3;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-gold-alt: #FFDF00;
+}

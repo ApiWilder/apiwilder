@@ -1,23 +1,36 @@
-* {
+/* ============================================
+   API WILDER - Styles consolidés
+   Variables et composants d'abord
+   ============================================ */
+@import url('components/variables.css');
+@import url('components/all_component.css');
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-:root {
-  --jaune: #f4c430;
-  --jaune-pastel: #fff4cc;
-  --noir: #111;
-  --blanc: #ffffff;
+body {
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  background: var(--color-bg-cream);
+  color: var(--color-text);
 }
 
+/* ============================================
+   PAGE INDEX (Accueil)
+   ============================================ */
 header {
   background-color: var(--jaune-pastel);
   padding-bottom: 60px;
 }
 
-.container {
+header > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,19 +69,19 @@ header {
   cursor: pointer;
 }
 
-.hero {
+header .hero {
   text-align: left;
   margin-top: 40px;
   padding: 0 20px;
 }
 
-.hero h1 {
+header .hero h1 {
   font-size: 42px;
   color: var(--noir);
   margin-bottom: 20px;
 }
 
-.hero p {
+header .hero p {
   max-width: 600px;
   margin: 0 auto 30px auto;
   color: var(--noir);
@@ -102,18 +115,689 @@ header {
   transition: 0.3s;
 }
 
-
 .btn:hover {
   background-color: var(--noir);
   color: var(--blanc);
 }
 
+/* ============================================
+   PAGES CONTACT & DONS - Header / Nav / Hero
+   ============================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--color-bg-cream);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  height: 90px;
+}
+
+.header .burger {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  width: 28px;
+  text-decoration: none;
+  font-size: 0;
+}
+
+.header .burger span {
+  display: block;
+  height: 2.5px;
+  background: var(--color-text);
+  border-radius: 2px;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  z-index: 200;
+  background: var(--color-bg-cream);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 32px;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
+}
+
+.nav-overlay:target {
+  display: flex;
+}
+
+.nav-overlay ul {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nav-overlay ul li a {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-overlay ul li a:hover,
+.nav-overlay ul li a.active {
+  color: var(--color-primary);
+}
+
+.nav-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-size: 2.5rem;
+  color: var(--color-text);
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* Hero pleine page (contact / dons) */
+section.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+section.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.hero-inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+section.hero .hero-content h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.hero-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Boutons contact / dons */
+.btn.yellow {
+  display: block;
+  width: 100%;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn.dark {
+  background: var(--color-dark);
+  color: #fff;
+}
+
+.btn.dark-outline {
+  display: block;
+  width: 100%;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn.yellow:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btn.dark-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Container contact */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+/* ============================================
+   PAGE CONTACT - Formulaire & cartes
+   ============================================ */
+.form-section {
+  display: none;
+}
+
+.form-section:target {
+  display: block;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 44px 40px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-submit input,
+.form-submit textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.95rem;
+  background: #fafafa;
+  transition: border 0.2s;
+  outline: none;
+}
+
+.form-submit input:focus,
+.form-submit textarea:focus {
+  border-color: var(--color-primary);
+  background: #fff;
+}
+
+.form-submit textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.row-inputs {
+  display: flex;
+  gap: 14px;
+}
+
+.row-inputs input {
+  flex: 1;
+}
+
+.benevole-card {
+  display: flex;
+  gap: 32px;
+  background: var(--color-bg-cream);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.col > label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333;
+  cursor: pointer;
+}
+
+.checkbox-group input,
+.radio-group input {
+  accent-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.btn-group .btn {
+  width: auto;
+  padding: 14px 28px;
+}
+
+/* Page succès (formulaire envoyé) */
+.succes-card {
+  text-align: center;
+}
+.succes-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   PAGE DONS - Jauge, paliers, liste
+   ============================================ */
+#don-form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#gauge-current {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #292929;
+}
+
+#gauge-goal {
+  font-size: 0.9rem;
+  color: #292929;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.dons-gauge {
+  background: #292929;
+  border-radius: 8px;
+  height: 22px;
+}
+
+.dons-gauge-bar {
+  height: 100%;
+  background: var(--color-gold-alt);
+  border-radius: 8px;
+  transition: width 0.8s ease;
+}
+
+#contributeurs {
+  font-size: 0.85rem;
+  color: #555;
+  display: block;
+  margin-top: 12px;
+}
+
+.dons-sectionTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 10px 0;
+  border-radius: 16px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#dons-list {
+  list-style: none;
+  padding: 0;
+}
+
+#dons-recent {
+  padding: 20px 16px;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+  background-image: url('Apiwilder/image8.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.dons-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.dons-recentList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.don-item {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.don-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d6d6d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.don-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.don-name {
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.don-time {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.don-amount {
+  color: var(--color-text);
+  font-weight: 900;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.dons-header-paliers {
+  font-weight: 700;
+  font-size: 22px;
+  color: #292929;
+}
+
+#dons-recompenseTitle {
+  font-size: 13px;
+  color: #8D8C8C;
+  font-weight: 400;
+}
+
+.dons-section {
+  padding: 16px;
+}
+
+.dons-rewards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reward-card {
+  background: #ffffff;
+  border-radius: 0;
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reward-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.reward-badge {
+  background: #FFF8E7;
+  border-radius: 14px;
+  min-width: 56px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #C8860A;
+  font-size: 28px;
+}
+
+.reward-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reward-range {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.reward-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.reward-desc {
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.reward-btn {
+  background: var(--color-gold-alt);
+  color: var(--color-text);
+  border: none;
+  border-radius: 50px;
+  padding: 14px 0;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: none;
+  letter-spacing: 0.01em;
+}
+
+.reward-btn:hover {
+  background-color: var(--color-primary-hover);
+  transform: scale(0.99);
+}
+
+.reward-btn:active {
+  background: #D7AE0A;
+  transform: scale(0.97);
+}
+
+/* ============================================
+   PAGE PROJET - Overrides (complète les composants)
+   ============================================ */
+.header:has(.navbar) {
+  background: linear-gradient(135deg, rgba(255, 191, 0, 0.1), rgba(90, 90, 90, 0.05));
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.header__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+.navbar {
+  margin-bottom: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-bg-white);
+  z-index: 999;
+}
+
+.hero:has(.hero__content) {
+  text-align: center;
+  padding: 40px 20px;
+  background: url('asset/img_main_projet.jpeg') center/cover no-repeat fixed;
+  position: relative;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero:has(.hero__content)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   FOOTER commun
+   ============================================ */
+footer {
+  background-color: var(--noir);
+  color: var(--blanc);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-top: 2rem;
+}
+
+footer p {
+  opacity: 0.85;
+}
+
+.footer {
+  background: var(--color-dark);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ============================================
+   RESPONSIVE - Index
+   ============================================ */
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
   }
 
-  #toogle {
+  #toggle {
     display: none;
   }
 
@@ -129,18 +813,75 @@ header {
     display: block;
   }
 
-  .hero h1 {
+  header .hero h1 {
     font-size: 30px;
   }
 }
 
-/* Ajout du footer (feature/footer) */
-.footer {
-  color: #f0f32a;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  padding-top: 2rem;
+/* ============================================
+   RESPONSIVE - Contact
+   ============================================ */
+@media (max-width: 600px) {
+  section.hero .hero-content {
+    padding: 24px 20px 40px;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+
+  .row-inputs {
+    flex-direction: column;
+  }
+
+  .benevole-card {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - Dons
+   ============================================ */
+@media (min-width: 768px) {
+  .dons-section {
+    width: 520px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .dons-sectionTitle {
+    font-size: 24px;
+  }
+
+  .dons-recentList {
+    gap: 12px;
+  }
+
+  .don-item {
+    padding: 14px 18px;
+    border-radius: 14px;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .don-avatar {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .don-name {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .don-time {
+    font-size: 13px;
+  }
+
+  .don-amount {
+    font-size: 22px;
+  }
 }
