@@ -17,7 +17,7 @@ async function loadDons() {
         li.className = "don-item";
 
         const initiale = donor.name.charAt(0).toUpperCase();
-        const timeAgo = "Il y a 2 h"; // Remplace par ta logique si tu as un timestamp
+        const timeAgo = "Il y a 2 h"; 
 
         li.innerHTML = `
             <div class="don-avatar">${initiale}</div>

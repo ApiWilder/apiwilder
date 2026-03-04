@@ -10,34 +10,34 @@
 </head>
 
 <body>
-   <header>
-  <div class="container">
-    <div class="logo">
-      <img src="image/logo.png" alt="Api Wilder">
-    </div>
-    <input type="checkbox" id="toggle">
-    <label for="toggle" class="burger">☰</label>
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Projets</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="hero">
-    <span class="label-top">TOUT SAVOIR SUR</span>
-    <h1>Les dons</h1>
-    <p>Soutenez un rucher collectif et local qui agit depuis 2011 
-       pour la biodiversité à Berchem. Votre don finance du matériel, 
-       des ateliers et la survie de nos pollinisateurs.</p>
-    <div class="hero-buttons">
-      <a href="#" class="btn">Faire un don</a>
-      <a href="#" class="btn-outline">Devenir bénévole</a>
-    </div>
-  </div>
-</header>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/logoapiwilder/logo api wilder typo (black)-08.png" alt="Api Wilder">
+            </div>
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="burger">☰</label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <span class="label-top">TOUT SAVOIR SUR</span>
+            <h1>Les dons</h1>
+            <p>Soutenez un rucher collectif et local qui agit depuis 2011
+                pour la biodiversité à Berchem. Votre don finance du matériel,
+                des ateliers et la survie de nos pollinisateurs.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn">Faire un don</a>
+                <a href="#" class="btn-outline">Devenir bénévole</a>
+            </div>
+        </div>
+    </header>
 
 
     <main id="dons-main">
@@ -51,16 +51,10 @@
             </div>
             <div class="dons-amountLimits">
             </div>
+            <p id="contributeurs">68 contributeurs soutiennent ce projets </p>
         </section>
 
-        <!-- Section "Dons récents" inscrits dans le fichier json -->
-        <section class="dons-section">
-            <div class="dons-header">
-                <h2 class="dons-sectionTitle">Dons récents</h2>
-                <span class="dons-badge">Top 4</span>
-            </div>
-            <ul class="dons-recentList" id="recent-list"></ul>
-        </section>
+
 
         <!-- Section récompense - palier -->
         <section class="dons-section">
@@ -73,55 +67,76 @@
 
                 <div class="reward-card">
                     <div class="reward-card-top">
-                        <p class="reward-badge">10€</p>
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
+                        </div>
                         <div class="reward-info">
+                            <p class="reward-range">0-50€</p>
                             <p class="reward-title">Remerciement</p>
-                            <p class="reward-desc">Carte de remerciement personnalisée</p>
+                            <p class="reward-desc">Un grand merci du fond du coeur</p>
                         </div>
                     </div>
-                    <button class="reward-btn">Choisir ce palier</button>
+                    <button class="reward-btn">Obtenir la récompense</button>
                 </div>
 
                 <div class="reward-card">
                     <div class="reward-card-top">
-                        <p class="reward-badge">25€</p>
-                        <div class="reward-info">
-                            <p class="reward-title">Pot de miel 250g</p>
-                            <p class="reward-desc">Un pot de notre miel artisanal</p>
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
                         </div>
-                    </div>
-                    <button class="reward-btn">Choisir ce palier</button>
-                </div>
-
-                <div class="reward-card">
-                    <div class="reward-card-top">
-                        <p class="reward-badge">50€</p>
                         <div class="reward-info">
+                            <p class="reward-range">51-100€</p>
                             <p class="reward-title">Visite du rucher</p>
-                            <p class="reward-desc">Invitation à une visite guidée exclusive</p>
+                            <p class="reward-desc">Une visite au rucher, au plus près des abeilles.</p>
                         </div>
                     </div>
-                    <button class="reward-btn">Choisir ce palier</button>
+                    <button class="reward-btn">Obtenir la récompense</button>
                 </div>
 
                 <div class="reward-card">
                     <div class="reward-card-top">
-                        <p class="reward-badge">100€</p>
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
+                        </div>
                         <div class="reward-info">
-                            <p class="reward-title">Pack découverte</p>
-                            <p class="reward-desc">2 pots de miel + visite + atelier</p>
+                            <p class="reward-range">101-200€</p>
+                            <p class="reward-title"></p>
+                            <p class="reward-desc">Un pot de miel de la récolte (selon la saison)<br>La visite du rucher
+                            </p>
                         </div>
                     </div>
-                    <button class="reward-btn">Choisir ce palier</button>
+                    <button class="reward-btn">Obtenir la récompense</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="reward-card-top">
+                        <div class="reward-badge">
+                            <img src="" alt="pic" />
+                        </div>
+                        <div class="reward-info">
+                            <p class="reward-range">À partir de 200 €</p>
+                            <p class="reward-title"></p>
+                            <p class="reward-desc">L'expérience ApiWilder<br>Visite du rucher<br>Un à deux pots de miel
+                            </p>
+                        </div>
+                    </div>
+                    <button class="reward-btn">Obtenir la récompense</button>
                 </div>
 
             </div>
         </section>
 
+        <!-- Section "Dons récents" inscrits dans le fichier json -->
+        <section class="dons-section" id="dons-recent">
+            <div class="dons-header">
+                <h2 class="dons-sectionTitle">Dons récents</h2>
+            </div>
+            <ul class="dons-recentList" id="recent-list"></ul>
+        </section>
     </main>
 
     <footer>
-        <a href="#" class="footer"> CGU | confidentialité | Cookies </a>
+        <p>Apiwilder©2026</p>
     </footer>
     <script src="dons.js"></script>
 </body>
