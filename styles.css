@@ -246,6 +246,18 @@ section.hero .hero-content {
   margin: 0 auto;
 }
 
+/* Page dons : bloc centré, texte aligné à gauche dans le bloc */
+body:has(#dons-main) section.hero .hero-content,
+body:has(#dons-main) section.hero .hero-inner {
+  text-align: left;
+}
+
+/* Page contact : pareil que dons (bloc centré, texte à gauche) */
+body:has(#contact-main) section.hero .hero-content,
+body:has(#contact-main) section.hero .hero-inner {
+  text-align: left;
+}
+
 .hero-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
@@ -766,6 +778,19 @@ footer {
   font-size: 14px;
   letter-spacing: 0.5px;
   margin-top: 2rem;
+}
+
+/* Footer fixé en bas de page (index, success) — sans classe body */
+body:has(header > .hero),
+body:has(.succes-card) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body:has(header > .hero) footer,
+body:has(.succes-card) footer {
+  margin-top: auto;
 }
 
 footer p {
