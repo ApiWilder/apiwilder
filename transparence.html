@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiWilder - Transparence</title>
+    <link href="./transparence.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+          <div class="logo">
+            <img src="./image/logo-black.png" alt="Api Wilder">
+          </div>
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="burger">☰</label>
+          <nav class="nav">
+            <ul>
+              <li><a href="#">Accueil</a></li>
+              <li><a href="#">Dons</a></li>
+              <li><a href="projets_responsive.html">Projets</a></li>
+              <li><a href="#">Transparence</a></li>
+              <li><a href="#">À propos</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="page-content">
+            <!--<div class="page-label">Page_Transparence</div>-->
+            <div class="page-subtitle">OÙ VA NOTRE ARGENT ?</div>
+            <h1 class="page-title">Transparence</h1>
+            <p class="page-description">
+                Chaque euro versé à l'ASBL ApiWilder est réinvesti directement dans le rucher et nos actions de sensibilisation. Nous fonctionnons grâce au bénévolat.
+            </p>
+            <div class="button-group">
+              <a href="#" class="button button-primary">Faire un don</a>
+              <a href="projets_responsive.html" class="button button-secondary">Devenir adhérent</a>
+            </div>
+        </div>
+    </header>
+    <!-- SECTION PROJETS FINANCÉS -->
+     <section>
+        <div class="projets-finances-container">
+            <div class="projets-finances-card">
+                <h2 class="projets-finances-title">Projets financés</h2>
+                    <div class="projets-list">
+                        <!-- Projet 1 -->
+                        <div class="projet-item">
+                            <div class="projet-image">
+                                <img src="./image/image-tenue.jpeg" alt="Nouvelles tenures">
+                            </div>
+                            <div class="projet-text">
+                                <div class="texte">De nouvelles<br> tenures pour nos abeilles.</div>
+                            </div>
+                            
+                        </div>
+                        <!-- Projet 2 -->
+                        <div class="projet-item">
+                            <div class="projet-image">
+                                <img src="./image/image-reine.jpeg" alt="Nouvelle reine">
+                            </div>
+                            <div class="projet-text">
+                                <div class="texte">Une nouvelle reine<br> nous a rejoint !</div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 3 -->
+                        <div class="projet-item">
+                            <div class="projet-image">
+                                <img src="./image/image-miel.jpeg" alt="Miel">
+                            </div>
+                            <div class="projet-text">
+                                <div class="texte">15 kg de miel ont été <br>mis en pot.</div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 4 -->
+                        <div class="projet-item">
+                            <div class="projet-image">
+                                <img src="./image/image-ruche.jpeg" alt="Nouvelle ruche">
+                            </div>
+                            <div class="projet-text">
+                                <div class="texte">Une nouvelle ruche<br> a été installée.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="dons-section" id="don-form">
+
+    
+            <span id="gauge-current">0€</span>
+            <span id="gauge-goal">0€</span>
+            <div class="dons-gauge">
+                <div class="dons-gauge-bar" id="gauge-bar"></div>
+            </div>
+            <div class="dons-amountLimits">
+            </div>
+         </div>
+       
+ </section>
+
+<script>
+async function loadDons() {
+    const { goal, recent } = await fetch("db.json").then(r => r.json());
+
+    const current = [...recent].reduce((total, donor) => total + donor.amount, 0);
+
+    document.getElementById("gauge-bar").style.width = Math.min((current / goal) * 100, 100) + "%";
+    document.getElementById("gauge-current").textContent = current + "€";
+    document.getElementById("gauge-goal").textContent = "Sur un objectif de " + goal + "€";
+
+    // Tri par montant décroissant, garde les 4 plus gros
+    const top4 = [...recent].sort((a, b) => b.amount - a.amount).slice(0, 4);
+
+    const list = document.getElementById("recent-list");
+
+    top4.forEach(donor => {
+        const li = document.createElement("li");
+        li.className = "don-item";
+
+        const initiale = donor.name.charAt(0).toUpperCase();
+        const timeAgo = "Il y a 2 h"; // Remplace par ta logique si tu as un timestamp
+
+        li.innerHTML = `
+            <div class="don-avatar">${initiale}</div>
+            <div class="don-info">
+                <span class="don-name">${donor.name}</span>
+                <span class="don-time">${timeAgo}</span>
+            </div>
+            <span class="don-amount">${donor.amount}€</span>
+        `;
+
+        list.appendChild(li);
+    });
+}
+
+loadDons();
+</script>
+<div class="historique-section">
+        <div class="historique-container">
+            <div class="historique-card">
+                <h2 class="historique-title">Historique simplifié</h2>
+                
+                <div class="historique-image">
+                    <img src="./image/historique.jpeg" alt="Ruche">
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">01/02/2026 - Achat de 2kg de cire</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">15/02/2026 - Installation d'une nouvelle ruche</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">22/02/2026 - Achat de combinaisons d'apiculture</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
