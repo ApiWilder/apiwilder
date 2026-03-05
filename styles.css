@@ -47,7 +47,6 @@ header > .container {
 
 .nav ul {
   display: flex;
-  flex-direction: row;
   list-style: none;
   gap: 20px;
 }
@@ -137,7 +136,6 @@ header .hero p {
   padding: 16px 24px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
 /* Dons, contact, projet : logo centré */
@@ -267,25 +265,12 @@ section.hero .hero-content {
   margin: 0 auto;
 }
 
-/* Page dons : bloc centré, texte aligné à gauche dans le bloc */
 body:has(#dons-main) section.hero .hero-content,
-body:has(#dons-main) section.hero .hero-inner {
-  text-align: left;
-}
-
-/* Page contact : pareil que dons (bloc centré, texte à gauche) */
+body:has(#dons-main) section.hero .hero-inner,
 body:has(#contact-main) section.hero .hero-content,
-body:has(#contact-main) section.hero .hero-inner {
-  text-align: left;
-}
-
-/* Page index : idem (bloc centré, texte à gauche) */
+body:has(#contact-main) section.hero .hero-inner,
 body:has(#index-main) section.hero .hero-content,
-body:has(#index-main) section.hero .hero-inner {
-  text-align: left;
-}
-
-/* Page projet : idem */
+body:has(#index-main) section.hero .hero-inner,
 body:has(#projet-main) section.hero .hero-content,
 body:has(#projet-main) section.hero .hero-inner {
   text-align: left;
@@ -294,7 +279,6 @@ body:has(#projet-main) section.hero .hero-inner {
 .hero-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
-  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -313,7 +297,6 @@ section.hero .hero-content h1 {
 .hero-desc {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.6;
   color: #fff;
   margin-bottom: 28px;
@@ -503,7 +486,6 @@ section.hero .btn--light:hover {
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  font-weight: 400;
   color: #333;
   cursor: pointer;
 }
@@ -518,7 +500,6 @@ section.hero .btn--light:hover {
 .btn-group {
   display: flex;
   gap: 14px;
-  justify-content: flex-start;
   margin-top: 8px;
 }
 
@@ -629,7 +610,6 @@ section.hero .btn--light:hover {
   display: flex;
   align-items: center;
   gap: 12px;
-  border: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -637,13 +617,8 @@ section.hero .btn--light:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  object-fit: cover;
   background-color: #d6d6d6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-  font-size: 18px;
-  font-weight: 700;
   flex-shrink: 0;
 }
 
@@ -682,7 +657,6 @@ section.hero .btn--light:hover {
 #dons-recompenseTitle {
   font-size: 13px;
   color: #8D8C8C;
-  font-weight: 400;
 }
 
 .dons-section {
@@ -713,7 +687,6 @@ section.hero .btn--light:hover {
 .reward-badge {
   background: #FFF8E7;
   border-radius: 14px;
-  min-width: 56px;
   width: 56px;
   height: 56px;
   display: flex;
@@ -763,8 +736,6 @@ section.hero .btn--light:hover {
   cursor: pointer;
   text-align: center;
   transition: background 0.2s, transform 0.1s;
-  box-shadow: none;
-  letter-spacing: 0.01em;
 }
 
 .reward-btn:hover {
@@ -861,7 +832,6 @@ footer p {
   text-align: center;
   margin-top: 50px;
   font-size: 1rem;
-  text-decoration: none;
 }
 
 .footer__container {
@@ -881,10 +851,6 @@ footer p {
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
-  }
-
-  #toggle {
-    display: none;
   }
 
   .nav {
@@ -949,13 +915,11 @@ footer p {
     padding: 14px 18px;
     border-radius: 14px;
     gap: 16px;
-    align-items: center;
   }
 
   .don-avatar {
     width: 46px;
     height: 46px;
-    font-size: 18px;
   }
 
   .don-name {
