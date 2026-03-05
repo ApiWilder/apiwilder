@@ -17,7 +17,7 @@
   
   /* ===== HEADER ===== */
   body > header {
-    background-image: url(image/abeilles_arbre.jpeg);
+    background-image: url(/Apiwilder/abeilles_arbre.png);
     background-size: cover;
     background-color: var(--jaune-pastel);
     background-position: center;

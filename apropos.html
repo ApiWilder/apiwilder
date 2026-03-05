@@ -3,42 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="apropos.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>A propos de nous</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="./Apiwilder/logo-black.png" alt="Api Wilder" />
-        </div>
-        <input type="checkbox" id="toggle" />
-        <label for="toggle" class="burger">☰</label>
-        <nav class="nav">
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="dons.html">Dons</a></li>
-            <li><a href="projet.html">Projets</a></li>
-            <li><a href="transparence.html">Transparence</a></li>
-            <li><a href="apropos.html">À propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+    <header class="header">
+      <div class="header-logo">
+        <img src="./Apiwilder/logo-black.png" alt="Api Wilder" />
       </div>
-      <div class="hero">
-        <h1>À propos</h1>
-        <h2>Un rucher en lisière de bois</h2>
-        <p>
-          Depuis 2011, ApiWilder redonne vie à d'anciens terrains potagers au
-          Bois du Wilder. Soutenus par Bruxelles-Environnement et l'Agenda 21 de
-          Berchem, nous pratiquons une apiculture respectueuse, loin de la
-          productivité intensive.
-        </p>
-        <a href="#" class="btn">Faire un don</a>
-        <a href="#" class="btn-outline">Devenir bénévole</a>
-      </div>
+      <a href="#menu" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </header>
-    <section class="workers">
+
+    <nav id="menu" class="nav-overlay">
+      <a href="#" class="nav-close">&times;</a>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html" class="active">À propos</a></li>
+        <li><a href="projet.html">Projet</a></li>
+        <li><a href="transparence.html">Transparence</a></li>
+        <li><a href="dons.html">Dons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" style="background-image: url('./Apiwilder/abeilles_arbre.jpeg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-inner">
+          <p class="hero-label" style="color: #FFDF00;">Un rucher en lisière de bois</p>
+          <h1>À propos</h1>
+          <p class="hero-desc" style="color: #FFFBF0;">
+            Depuis 2011, ApiWilder redonne vie à d'anciens terrains potagers au Bois du Wilder.
+            Soutenus par Bruxelles-Environnement et l'Agenda 21 de Berchem, nous pratiquons une
+            apiculture respectueuse, loin de la productivité intensive.
+          </p>
+          <div class="hero-btns">
+            <a href="dons.html" class="btn yellow">Faire un don</a>
+            <a href="contact.html#benevole" class="btn dark-outline">Devenir bénévole</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos-main" class="workers">
       <h1>De la ruche au pot</h1>
      
 <!-- --------------------------------------------------------debut photo -->
