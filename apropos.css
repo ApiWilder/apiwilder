@@ -263,12 +263,8 @@ header {
 
 /* ===== ABOUT CARDS ===== */
 .about-card {
-  background: white;
-  padding: 40px;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+    padding: 40px;
+  }
 
 .about-card figure {
   margin: 0;
@@ -277,12 +273,9 @@ header {
 
 /* ===== HEXAGONE IMAGE ===== */
 .historique-image {
-  width: 280px;
-  height: 280px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  overflow: hidden;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  
+  margin: 0 ;
+  
 }
 
 .historique-image img {
@@ -308,11 +301,9 @@ header {
 }
 
 /* ===== CARD TEXT ===== */
-.card-text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+ .card-text {
+    text-align: left;
+  }
 
 .card-text h3 {
   font-size: 28px;
@@ -321,13 +312,13 @@ header {
   color: var(--noir);
 }
 
+
 .card-text .subtitle {
   font-size: 14px;
   color: #888;
   font-weight: 500;
   margin: 0;
 }
-
 .card-text .description {
   font-size: 15px;
   color: #555;
@@ -546,10 +537,8 @@ footer p {
   height: 280px;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   overflow: hidden;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
 }
 .historique-image img {
   width: 100%;
@@ -557,7 +546,6 @@ footer p {
   object-fit: cover;
   display: block;
 }
-
 .workers {
   padding: 60px 20px;
   background: #fcfcfc;
@@ -686,24 +674,21 @@ footer p {
   grid-template-columns: 1fr 280px;
 }
 
- .about-card {
+.about-card {
   background: white;
-  padding: 40px;
+  padding: 20px;
   margin-bottom: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 .about-card {
   display: grid;
 }
 
 .card-content {
-  display: grid;
-  gap: 30px;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .about-card:nth-child(odd) .card-content {
@@ -714,9 +699,11 @@ footer p {
   grid-template-columns: 1fr 280px;
 }
 
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
+@media (min-width: 769px) {
+  .card-content {
+    display: grid;
+    gap: 30px;
+    align-items: flex-start;
   }
 
   .card-content.left,
