@@ -4,10 +4,6 @@ async function loadDons() {
     const data = await fetch("db.json").then(reponse => reponse.json());
     const goal = data.goal;
     const recent = data.recent;
-
-    const gaugeBar = document.getElementById("gauge-bar");
-    const gaugeCurrent = document.getElementById("gauge-current");
-    const gaugeGoal = document.getElementById("gauge-goal");
   
     //On calcule le total des dons
     let current = 0;
@@ -17,9 +13,9 @@ async function loadDons() {
   
     //met à jour la jauge
     const percent = Math.min((current / goal) * 100, 100);
-    if (gaugeBar) gaugeBar.style.width = percent + "%";
-    if (gaugeCurrent) gaugeCurrent.textContent = current + "€";
-    if (gaugeGoal) gaugeGoal.textContent = "Sur un objectif de " + goal + "€";
+    document.getElementById("gauge-bar").style.width = percent + "%";
+    document.getElementById("gauge-current").textContent = current + "€";
+    document.getElementById("gauge-goal").textContent = "Sur un objectif de " + goal + "€";
   
     // On trie les dons du plus grand au plus petit, et on garde les 4 premiers
     const sorted = recent.slice(); // copie du tableau pour ne pas modifier l'original
@@ -30,7 +26,6 @@ async function loadDons() {
   
     // Affiche chaque donateur dans la liste
     const list = document.getElementById("recent-list");
-    if (!list) return;
   
     for (const donor of top4) {
       const li = document.createElement("li");
